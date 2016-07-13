@@ -9,7 +9,7 @@ r_github_packages:
 r_packages:
   - covr
 
-before_install:
+after_install:
   - source ./run_Rperform.sh
 
 after_success:
