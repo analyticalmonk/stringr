@@ -4,9 +4,13 @@ sudo: required
 
 r_github_packages:
   - Rexamine/stringi
+  - analyticalmonk/Rperform
 
 r_packages:
   - covr
+
+before_install:
+  - source ./run_Rperform.sh
 
 after_success:
   - Rscript -e 'covr::codecov()'
